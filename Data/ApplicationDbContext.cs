@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CoreRazorApp.Models;
 
 namespace CoreRazorApp.Data
 {
@@ -9,5 +10,6 @@ namespace CoreRazorApp.Data
             : base(options)
         {
         }
+        public DbSet<CoreRazorApp.Models.Organization> Organization { get; set; } = default!;
     }
 }
